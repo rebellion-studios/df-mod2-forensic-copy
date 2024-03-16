@@ -2,7 +2,7 @@
 
 My task was to create fictional evidence files, and then duplicate them to create a sound copy to work with for file analyzation. The 1st evidence file shows a message about somebody claiming not to have sexual relations with somebody. The 2nd evidence file shows lyrics to a Monster High song. The 3rd evidence file shows the total budget and box office gross for the Scream movies. The 4th evidence file shows a quote from a certain horror icon. The 5th evidence file shows a bunch of years.
 
-To obtain forensically sound files, I used the following code for each file. This copies everything in the chosen folder to a new location. Hash files were added to the original folder as well as the new folder.
+To obtain forensically sound files, I used the following code for each file. This copies everything in the chosen folder to a new location. Seperate hash files were added to the original folder as well as the new folder, before being combined into a single file.
 
 ```
 Copy-Item "OLD-FOLDER\*" -Destination "NEW-FOLDER" -Recurse
