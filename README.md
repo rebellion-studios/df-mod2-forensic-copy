@@ -8,10 +8,13 @@ To obtain forensically sound files, I used the following code for each file. Thi
 Copy-Item "OLD-FOLDER\*" -Destination "NEW-FOLDER" -Recurse
 ```
 
-Has files were created in the original
+To create hashes, the following code was used.
+
+```
+Get-FileHash PATH\evidence-new\evidence-#.txt | Out-File PATH\df-mod2-forensic-copy\evidence-new\hash-#.txt
+```
 
 ## Hash
-
 
 | File           | Original SHA-256                                                 | New SHA 256                                                      | Match? |
 |----------------|------------------------------------------------------------------|------------------------------------------------------------------|--------|
@@ -20,11 +23,3 @@ Has files were created in the original
 | evidence-3.txt | 5DEDAB79F54D368E84D290114F188D7539FCAC1801077C712F6776BBFA51F52E | 5DEDAB79F54D368E84D290114F188D7539FCAC1801077C712F6776BBFA51F52E | Yes    |
 | evidence-4.txt | 559FF8D5BF29E3139E8D27B7BFBA6F2068026E8AE634480B759233726CC9F250 | 559FF8D5BF29E3139E8D27B7BFBA6F2068026E8AE634480B759233726CC9F250 | Yes    |
 | evidence-5.txt | 561E8FD4FCC77FF665019C3C0B82C2B6C390381F13D2D3748AEC6DBB05B291CF | 561E8FD4FCC77FF665019C3C0B82C2B6C390381F13D2D3748AEC6DBB05B291CF | Yes    |
-
-
-
-
-
-
-
-Get-FileHash PATH\evidence-new\evidence-#.txt | Out-File PATH\df-mod2-forensic-copy\evidence-new\hash-#.txt
